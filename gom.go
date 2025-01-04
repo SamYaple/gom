@@ -44,33 +44,3 @@ func Alt(parsers ...ParserFunc) ParserFunc {
 		return input, nil, errors.New("alt parsers do not match")
 	}
 }
-
-//
-//func main() {
-//    input := "Hello World"
-//    fmt.Printf("input string: `%s`\n", input)
-//
-//    parser := Sequence(
-//        Tag("Hello"),
-//	Alt(
-//	    Tag(" Bob"),
-//	    Tag(" World"),
-//	),
-//    )
-//    input, matches, err := parser(input)
-//    if err != nil {
-//        fmt.Println("ERROR parsing")
-//	return
-//    }
-//
-//    matchesSlice, ok := matches.([]interface{})
-//    if !ok {
-//        fmt.Println("ERROR interface")
-//	return
-//    }
-//
-//    for _, match := range matchesSlice {
-//        fmt.Printf("matched: `%s`\n", match)
-//    }
-//    fmt.Printf("remaining: `%s`\n", input)
-//}
