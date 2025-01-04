@@ -36,8 +36,8 @@ func TestTagNoMatch(t *testing.T) {
 	}
 }
 
-func TestSequence(t *testing.T) {
-	parser := Sequence(Tag("Hello"), Tag(" "), Tag("World"))
+func TestTuple(t *testing.T) {
+	parser := Tuple(Tag("Hello"), Tag(" "), Tag("World"))
 	input := "Hello World"
 
 	remaining, result, err := parser(input)

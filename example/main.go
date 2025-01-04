@@ -9,7 +9,7 @@ func main() {
 	input := "Hello World"
 	fmt.Printf("input string: `%s`\n", input)
 
-	parser := gom.Sequence(
+	parser := gom.Tuple(
 		gom.Tag("Hello"),
 		gom.Tag(" "),
 		gom.Alt(
